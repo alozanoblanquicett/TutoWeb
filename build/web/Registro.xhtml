@@ -1,0 +1,154 @@
+<?xml version='1.0' encoding='UTF-8' ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:h="http://xmlns.jcp.org/jsf/html"
+      xmlns:p="http://primefaces.org/ui"
+      xmlns:f="http://xmlns.jcp.org/jsf/core">
+    <h:head>
+        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous"/>
+        <link href="resouser/css/Esteilos.css" rel="stylesheet" type="text/css"/>
+        <title>Registro</title>
+    </h:head>
+    <h:body class="fondo">
+        <header>
+            <nav class="navbar navbar-expand-md navbar-dark fixed-top bg-dark">
+                <a class="navbar-brand" href="#">Proyecto tutorias</a>
+                <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarCollapse" aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarCollapse">
+                    <ul class="navbar-nav mr-auto">
+                        <li class="nav-item active">
+                            <a class="nav-link" href="index.xhtml">Inicio<span class="sr-only">(current)</span></a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#" data-toggle="modal" data-target="#login">Login</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="Registro.xhtml">Registros</a>
+                        </li>
+                    </ul>
+                    <form class="form-inline mt-2 mt-md-0">
+                        <input class="form-control mr-sm-2" type="text" placeholder="Search" aria-label="Search"/>
+                        <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
+                    </form>
+                </div>
+            </nav>
+        </header>
+        <br/> <br/> <br/>
+        <div>
+            <h:form class="container delante">
+                <div class="form-group row">
+                    <label for="identifiacion" class="col-sm-2 col-form-label">Identificacion:</label>              
+                    <div class="col-sm-10">
+                        <p:inputText type="text" class="form-control col-sm-5" 
+                                     id ="identificacion" placeholder="Identificacion" value="#{estudianteBean.estudiante.identifiacion}"/>
+                    </div>
+                </div>
+
+                <div class="form-group row">
+                    <label for="nombre" class="col-sm-2 col-form-label">Nombre:</label>              
+                    <div class="col-sm-10">
+                        <p:inputText type="text" class="form-control col-sm-5"
+                                     id ="nombre" placeholder="Nombre" value="#{estudianteBean.estudiante.nombre}"/>
+                    </div>
+                </div>
+
+
+                <div class="form-group row">
+                    <label for="apellido" class="col-sm-2 col-form-label">Apellido:</label>              
+                    <div class="col-sm-10">
+                        <p:inputText type="text" class="form-control col-sm-5" 
+                                     id ="apellido" placeholder="Apellido" value="#{estudianteBean.estudiante.apellido}"/>
+                    </div>
+                </div>
+
+                <div class="form-group row">
+                    <label for="sexo" class="col-sm-2 col-form-label">Sexo:</label>              
+                    <div class="col-sm-10">
+                        <h:selectOneRadio id="sexo" class="custom-control custom-radio" 
+                                          value="#{estudianteBean.estudiante.sexo}">                         
+                            <f:selectItem itemLabel="Hombre" itemValue="Hombre" class="custom-control-input"/>
+                            <f:selectItem itemLabel="Mujer" itemValue="Mujer" class="custom-control-input"/>
+                        </h:selectOneRadio>
+                    </div>
+                </div>
+
+
+                <div class="form-group row">
+                    <label for="ciudad" class="col-sm-2 col-form-label">Ciudad:</label>              
+                    <div class="col-sm-10">
+                        <p:inputText type="text" class="form-control col-sm-5" 
+                                     id ="ciudad" placeholder="Ciudad" value="#{estudianteBean.estudiante.ciudad}"/>
+                    </div>
+                </div>
+
+                <div class="form-group row">
+                    <label for="direccion" class="col-sm-2 col-form-label">Direccion:</label>              
+                    <div class="col-sm-10">
+                        <p:inputText type="text" class="form-control col-sm-5"
+                                     id ="direccion" placeholder="Direccion" value="#{estudianteBean.estudiante.direccion}"/>
+                    </div>
+                </div>
+
+
+                <div class="form-group row">
+                    <label for="tipo" class="col-sm-2 col-form-label">Tipo de plan:</label>              
+                    <div class="col-sm-10">
+                        <h:selectOneRadio id="tipo" class="custom-control custom-radio" 
+                                          value="#{estudianteBean.estudiante.tipoPlan}">                         
+                            <f:selectItem itemLabel="Normal" itemValue="Normal" class="custom-control-input"/>
+                            <f:selectItem itemLabel="Platino" itemValue="Platino" class="custom-control-input"/>
+                            <f:selectItem itemLabel="Premium" itemValue="Premiun" class="custom-control-input"/>
+                        </h:selectOneRadio>
+                    </div>
+                </div>
+
+
+                <div class="form-group row">
+                    <label for="telefono" class="col-sm-2 col-form-label">Telefono:</label>              
+                    <div class="col-sm-10">
+                        <p:inputText type="tel" class="form-control col-sm-5"
+                                     id ="telefono" placeholder="Telefono" value="#{estudianteBean.estudiante.telefono}"/>
+                    </div>
+                </div>
+
+                <div class="form-group row">
+                    <label for="email" class="col-sm-2 col-form-label">Email:</label>              
+                    <div class="col-sm-10">
+                        <p:inputText type="email" class="form-control col-sm-5" 
+                                     id ="email" placeholder="Email" value="#{estudianteBean.estudiante.email}"/>
+                    </div>
+                </div>
+
+                <div class="form-group row">
+                    <label for="clave" class="col-sm-2 col-form-label">Clave:</label>              
+                    <div class="col-sm-10">
+                        <p:password class="form-control col-sm-5" id ="clave" placeholder="password" value="#{loginBean.login.clave}"/>
+                    </div>
+                </div>
+
+                <div class="form-group row">
+                    <label for="confirmarClave" class="col-sm-2 col-form-label">Confirmar clave:</label>              
+                    <div class="col-sm-10">
+                        <p:password class="form-control col-sm-5" id ="confirmarClave" placeholder="password" />
+                    </div>
+                </div>               
+
+                <div class="form-group row">
+                    <div class="col-sm-10">
+                        <h:commandButton class="btn btn-primary" value="Guardar" action="#{estudianteBean.guardar()}"/>
+                    </div>
+                </div>
+            </h:form>
+
+            <!-- FOOTER -->
+            <footer class="container">
+                <p class="float-right"><a href="#">PRoyecto de Aula</a></p>
+                <p>&copy; Integrantes, &middot; <a href="#">Duvan</a> <a href="#">Jhonatan</a> <a href="#">Diego</a> <a href="#">Juan</a>&middot; <a href="#">Terms</a></p>
+            </footer>
+        </div>
+
+    </h:body>
+</html>
+

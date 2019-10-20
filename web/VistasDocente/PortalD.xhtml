@@ -1,0 +1,137 @@
+<?xml version='1.0' encoding='UTF-8' ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:h="http://xmlns.jcp.org/jsf/html"
+      xmlns:p="http://primefaces.org/ui"
+      xmlns:f="http://xmlns.jcp.org/jsf/core">
+    <h:head>
+        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous"/>
+        <link href="../resouser/css/Esteilos.css" rel="stylesheet" type="text/css"/>
+        <title>ProtalDocente</title>
+    </h:head>
+    <h:body>
+
+        <p:layout fullPage="true">
+            <p:layoutUnit position="north" size="60">
+                <header>
+                    <nav class="navbar navbar-expand-md navbar-dark fixed-top bg-dark">
+                        <a class="navbar-brand" href="#"> <img src="../resouser/imagenes/perfil.jpg" width="30" height="30" class="img-responsive circular"/></a>
+
+                        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarCollapse" aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation">
+                            <span class="navbar-toggler-icon"></span>
+                        </button>
+                        <div class="collapse navbar-collapse" id="navbarCollapse">
+                            <ul class="navbar-nav mr-auto">
+                                <li class="nav-item active">
+                                    <a class="nav-link" href="PortalE.xhtml">Mi Portal<span class="sr-only">(current)</span></a>
+                                </li>
+                                <li class="nav-item">
+                                    <a class="nav-link" href="#" data-toggle="modal" data-target="#Buscartutoria"
+                                       onclick="PF('Buscaraula').show();">Buscar Aula</a>
+                                </li>
+                                <li class="nav-item">
+                                    <a class="nav-link" href="#" data-toggle="modal" data-target="#Buscarestudiante"
+                                       onclick="PF('Buscarestudiante').show();">Buscar estudiante</a>
+                                </li>
+                                <li class="nav-item">
+                                    <a class="nav-link" href="index.xhtml">Cerrar sesion</a>
+                                </li>
+                            </ul>
+                            <form class="form-inline mt-2 mt-md-0">
+                                <input class="form-control mr-sm-2" type="text" placeholder="Search" aria-label="Search"/>
+                                <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
+                            </form>
+                        </div>
+                    </nav>
+                </header>
+            </p:layoutUnit>
+
+            <p:layoutUnit position="center">
+                <h:form>
+                    <p:panel id="toggleable" header="Foro" toggleable="true" closable="true" toggleSpeed="500" 
+                             closeSpeed="500" widgetVar="panel" style="margin-bottom:20px">
+
+
+
+                        <h:panelGrid columns="2" cellpadding="10">
+                            <img src="resouser/imagenes/foro.png" class="img-responsive" height="200"/>
+                            <h:outputText value="Francis Ford Coppola's legendary continuation and sequel to his landmark 1972 film, The_Godfather, parallels the young Vito Corleone's rise with his son Michael's spiritual fall, deepening The_Godfather's depiction of the dark side of the American dream. 
+                                          In the early 1900s, the child Vito flees his Sicilian village for America after the local Mafia kills his family. Vito struggles to make a living, legally or illegally, for his wife and growing brood in Little Italy, 
+                                          killing the local Black Hand Fanucci after he demands his customary cut of the tyro's business. With Fanucci gone, Vito's communal stature grows." />
+
+                        </h:panelGrid>
+                        <p:separator/>
+                        <a class="nav-link" href="#">Participar en el foros</a>
+
+                        <f:facet name="options">
+                            <p:menu>
+                                <p:submenu label="Settings">
+                                    <p:menuitem value="Toggle" url="#" icon="pi pi-clone" onclick="PF('panel').toggle()" />
+                                    <p:menuitem value="Remove" url="#" icon="pi pi-times" onclick="PF('panel').close()" />
+                                </p:submenu>
+                            </p:menu>
+                        </f:facet>
+                    </p:panel>
+                </h:form>
+
+                <h:form>
+                    <p:panel id="toggleable" header="Galeria de lecciones" toggleable="true" closable="true" toggleSpeed="500" 
+                             closeSpeed="500" widgetVar="panel" style="margin-bottom:20px">
+
+
+
+                        <h:panelGrid columns="2" cellpadding="10">
+                            <img src="resouser/imagenes/galeria.jpg" class="img-responsive" height="200" width="300"/>
+                            <h:outputText value="Francis Ford Coppola's legendary continuation and sequel to his landmark 1972 film, The_Godfather, parallels the young Vito Corleone's rise with his son Michael's spiritual fall, deepening The_Godfather's depiction of the dark side of the American dream. 
+                                          In the early 1900s, the child Vito flees his Sicilian village for America after the local Mafia kills his family. Vito struggles to make a living, legally or illegally, for his wife and growing brood in Little Italy, 
+                                          killing the local Black Hand Fanucci after he demands his customary cut of the tyro's business. With Fanucci gone, Vito's communal stature grows." />
+
+                        </h:panelGrid>
+                        <p:separator/>
+                        <a class="nav-link" href="#">Ir a la galeria</a>
+
+                        <f:facet name="options">
+                            <p:menu>
+                                <p:submenu label="Settings">
+                                    <p:menuitem value="Toggle" url="#" icon="pi pi-clone" onclick="PF('panel').toggle()" />
+                                    <p:menuitem value="Remove" url="#" icon="pi pi-times" onclick="PF('panel').close()" />
+                                </p:submenu>
+                            </p:menu>
+                        </f:facet>
+                    </p:panel>
+                </h:form>
+            </p:layoutUnit>
+
+            <p:layoutUnit position="east" size="250" header="publicidad" style="text-align: center; margin-top: 20px;">
+
+            </p:layoutUnit>
+
+            <p:layoutUnit position="south" size="60">
+                <footer class="container">
+                    <p class="float-right"><a href="#">PRoyecto de Aula</a></p>
+                    <p>&copy; Integrantes, &middot; <a href="#">Duvan</a> <a href="#">Jhonatan</a> <a href="#">Diego</a> <a href="#">Juan</a>&middot; <a href="#">Terms</a></p>
+                </footer>
+            </p:layoutUnit>
+
+            <p:layoutUnit position="west" size="300">
+                <h:form>
+                    <p:accordionPanel>
+                        <p:tab title="Calendario de actividades">
+                            <br/>
+                            <p:calendar mode="inline" navigator="none"/>
+                            <br/>
+                        </p:tab>
+                        <p:tab title="Tutorias">
+                            <br/>
+                            <h:commandButton value="Crear tutoria"/>
+                            <br/>
+                        </p:tab>
+                    </p:accordionPanel>
+                </h:form>
+            </p:layoutUnit>
+        </p:layout>
+
+
+    </h:body>
+</html>
+

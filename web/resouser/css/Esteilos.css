@@ -1,0 +1,24 @@
+.circular{
+    border-radius: 25px;
+}
+.fondo{
+    background-image: url(../imagenes/Escritorio.jpg);
+    background-size: cover;
+}
+.fondo:before{
+    content: "";
+    width: 100%;
+    height: 100%;
+    background-color: black;
+    position: relative;
+    opacity: 0.10;
+} 
+.fondo label{
+    color: #fff;
+    font-size: 20px;
+    font-family: serif;
+}
+#perfil{
+    background-color: url(../imagenes/Escritorio2.jpg);
+    background-size: cover;
+}
